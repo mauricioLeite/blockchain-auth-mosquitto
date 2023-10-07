@@ -1,5 +1,5 @@
 services:
-  blockchain-auth-mosquitto:
+  mosquitto:
     build:
       context: .
     volumes:
