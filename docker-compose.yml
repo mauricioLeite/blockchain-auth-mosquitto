@@ -1,0 +1,30 @@
+services:
+  blockchain-auth-mosquitto:
+    build:
+      context: .
+    volumes:
+      - type: bind
+        source: ./config/
+        target: /mosquitto/config/
+      - type: bind
+        source: ./log/
+        target: /mosquitto/log/
+      - type: bind
+        source: ./data/
+        target: /mosquitto/data/
+    ports:
+      - target: 1883
+        published: 1883
+        protocol: tcp
+        mode: host
+      - target: 9001
+        published: 9001
+        protocol: tcp
+        mode: host
+    networks:
+      - mqtt-docker_net
+        
+
+networks:
+  mqtt-docker_net:
+    external: true
