@@ -1,0 +1,2 @@
+log/mosquitto.log
+docker-compose.override.yml
