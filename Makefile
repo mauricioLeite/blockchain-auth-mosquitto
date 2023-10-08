@@ -16,7 +16,7 @@ build: ## Builds the Node image
 	$(DOCKER_COMP) build
 
 up: ## Starts the docker hub
-	$(DOCKER_COMP) up -d
+	$(DOCKER_COMP) up
 
 down: ## Stops the docker hub
 	$(DOCKER_COMP) down --remove-orphans
